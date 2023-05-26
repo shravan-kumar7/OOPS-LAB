@@ -1,4 +1,4 @@
-//stack using array in C++
+//stack using array in C++.
 #include <iostream>
 using namespace std;
 
