@@ -1,4 +1,4 @@
-//find GCD of two numbers
+//find GCD of two numbers.
 #include <iostream>
 using namespace std;
 
