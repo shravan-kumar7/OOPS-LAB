@@ -1,4 +1,4 @@
-//to check whether number is even or odd.
+//to check whether number is even or odd
 #include<iostream>
 using namespace std;
 
