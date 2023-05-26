@@ -1,4 +1,4 @@
-//stack using array in C++ (modded with peek function and already given values)
+//stack using array in C++ (modded with peek function and already given values).
 #include <iostream>
 using namespace std;
 
