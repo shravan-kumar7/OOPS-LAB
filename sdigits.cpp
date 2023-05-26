@@ -1,4 +1,4 @@
-//get sum of digits of a number
+//get sum of digits of a number.
 #include<iostream>
 using namespace std;
 
