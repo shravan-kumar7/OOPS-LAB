@@ -1,4 +1,4 @@
-//to print multiplication table of a number.
+//to print multiplication table of a number
 #include<iostream>
 using namespace std;
 
