@@ -1,4 +1,4 @@
-//to check whether given year is leap year or not,
+//to check whether given year is leap year or not
 #include<iostream>
 using namespace std;
 
