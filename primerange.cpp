@@ -1,4 +1,4 @@
-//find the prime numbers between a given interval
+//find the prime numbers between a given interval.
 
 #include <iostream>
 using namespace std;
