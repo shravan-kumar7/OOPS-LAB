@@ -16,8 +16,14 @@ public:
 	void read();
 	void calc();
 	void disp();
+	void topp();
 
 };
+
+void stud::topp()
+{
+	cout<<"topper is "<<name<<endl;
+}
 
 
 void stud::read()
@@ -95,9 +101,13 @@ int main()
 			topper=obj[i].avg;	
 		}		
 	}
-	
-	cout<<"topper is : "<<topper<<endl<<endl;
-
+	for(i=0;i<n;i++)
+	{
+		if(obj[i].avg==topper)
+		{
+			obj[i].topp();	
+		}		
+	}
 	
 	return 0;
 }
