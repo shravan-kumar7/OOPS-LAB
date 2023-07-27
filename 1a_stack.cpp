@@ -1,99 +1,74 @@
-//stack using array in C++.
-#include <iostream>
+#include<iostream>
 using namespace std;
-
-#define max 20
-int stack[max];
-int top=-1;
-
-void push()
-{	
-	int n;
-	cout<<"enter a number ";
-	cin>>n;
-	if(top==max-1)
-	{
-		cout<<"Stack overflow\n";
-	}
-	else
-	{
-		top++;
-		stack[top]=n;
-		cout<<"Value "<<n<<" inserted\n";
-	}
-}
-
-void pop()
+#define size 5
+class stack
 {
-	if(top==-1)
-		cout<<"stack underflow\n";
-	else
-	{
-		cout<<stack[top]<<" deleted successfully\n";
-		top--;
-	}
-}
-
-void display()
+	int stck[size];
+	int tos;
+	public:
+	void init();
+	void push();
+	int pop();
+	void display();
+};
+void stack::init()
 {
-	if(top==-1)
-		cout<<"stack underflow\n";
-	else
+	tos=0;
+}
+void stack::push()
+{
+	int i;
+	if(tos==size)
 	{
-		for(int i=top;i>-1;i--)
-		{
-			cout<<stack[i]<<"\n";
-		}
+		cout<<"stack overflow \n";
+		return;
+	}
+	cout<<"enter element \n";
+	cin>>i;
+	stck[tos]=i;
+	tos++;
+}
+int stack::pop()
+{
+	if(tos==0)
+	{
+		cout<<"stack underflow \n";
+		return 1;
+	}
+	tos--;
+	cout<<"popped element is"<<stck[tos];
+	return 0;
+}
+void stack::display()
+{
+	if(tos==0)
+	{
+		cout<<"stack empty \n";
+		return;
+	}
+	for(int i=0;i<tos;i++)
+	{
+		cout<<stck[i]<<"\n";
 	}
 }
-
-
 int main()
 {
-	int choice;
-
+	int ch,i;
+	stack s;
+	s.init();
 	while(1)
 	{
-		cout<<"\n***MENU***\n1.push 2.pop 3.display 4.exit\n";
-		cout<<"enter your choice: ";
-		cin>>choice;
-		switch(choice)
+		cout<<"\n1.push 2.pop 3.display \n";
+		cin>>ch;
+		switch(ch)
 		{
-			case 1: push();
-				break;
-			case 2: pop();
-				break;
-			case 3: display();
-				break;
-			case 4: exit(0);
-			default: cout<<"invalid choice\n";
-				 break;
+			case 1:s.push();
+			break;
+			case 2:s.pop();
+			break;
+			case 3:s.display();
+			break;
+			default: return 0;
 		}
 	}
-}	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
