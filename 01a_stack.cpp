@@ -46,7 +46,7 @@ void stack::display()
 		cout<<"stack empty \n";
 		return;
 	}
-	for(int i=0;i<tos;i++)
+	for(int i=tos-1;i>-1;i--)
 	{
 		cout<<stck[i]<<"\n";
 	}
